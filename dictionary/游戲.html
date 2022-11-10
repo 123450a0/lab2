@@ -1,0 +1,179 @@
+
+<HTML>
+	<HEAD>
+		<TITLE>中秋博餅小程序 </TITLE>
+		<style>
+            body {
+                background-size: 100% 800px;
+            }
+            h1 {
+                text-align: center;
+                color: blue;
+                position: absolute;
+                left: 675px;
+                top: 200px;
+            }
+            #mm {
+                position: absolute;
+                left: 90px;
+                top: 0;
+            }
+            h2 {
+                text-align: center;
+                color: blueviolet;
+                position: absolute;
+                left: 650px;
+                top: 100px;
+            }
+            #s22 {
+                position: absolute;
+                left: 350px;
+                top: 400px;
+            }
+            
+		
+		 </style>
+		<SCRIPT LANGUAGE="JavaScript">
+
+
+var flagtime;
+var oldinner;
+var flag=1;
+var num;
+num=new Array(6);
+function init()
+{
+oldinner=bd.innerHTML;
+}
+function start()
+{
+    if(flag==1)
+         {
+			fun();
+			flag=0;
+			}
+     else
+		{
+			fun2();
+			flag=1;
+			}
+}
+function fun()
+{
+		var arr;
+		arr=new Array(6);
+		bd.innerHTML=oldinner;
+		 for(var i=0;i<6;i++)
+			 num[i]=0;
+	    for(var i=0;i<6;i++)
+	    {
+			arr[i]=Math.floor(Math.random()*6+1);
+			num[arr[i]-1]++;
+			}
+		pic1.src="images/"+arr[0]+".png";
+		pic2.src="images/"+arr[1]+".png";
+		pic3.src="images/"+arr[2]+".png";
+		pic4.src="images/"+arr[3]+".png";
+		pic5.src="images/"+arr[4]+".png";
+		pic6.src="images/"+arr[5]+".png";
+		flagtime=setTimeout("fun()",50);
+		
+}
+function fun2()
+{
+    var sijin=0;
+	window.clearTimeout(flagtime);
+	if(num[3]>=4)
+	{
+			if(num[3]==6)
+				bd.innerHTML+="<h1>恭喜！满堂红！</h1>";
+			else if(num[0]==2)
+				bd.innerHTML+="<h1>恭喜！状元插金花！</h1>";
+			else
+				bd.innerHTML+="<h1>恭喜！中状元啦！</h1>";
+		}
+		else
+		{
+			for(var i=0;i<6;i++)
+			{
+				if(num[i]==4)
+				sijin=1;
+				}
+				if(sijin==1)
+				bd.innerHTML+="<h1>恭喜！四进！</h1>";
+				else if(num[0]==1&&num[1]==1&&num[2]==1&&num[3]==1&&num[4]==1&&num[5]==1)
+				bd.innerHTML+="<h1>恭喜！对堂哦！！</h1>";
+				else if(num[3]==3)
+				bd.innerHTML+="<h1>恭喜！三红！</h1>";
+				else if(num[3]==2)
+				bd.innerHTML+="<h1>恭喜！二举！</h1>";
+				else if(num[3]==1)
+				bd.innerHTML+="<h1>恭喜！一秀！</h1>";
+				else
+				bd.innerHTML+="<h1>很可惜，什么都没有。</h1>";
+		}
+	
+}
+function fun2()
+{
+    var sijin=0;
+	window.clearTimeout(flagtime);
+	if(num[3]>=4)
+	{
+			if(num[3]==6)
+				bd.innerHTML+="<h1>恭喜！满堂红！</h1>";
+			else if(num[0]==2)
+				bd.innerHTML+="<h1>恭喜！状元插金花！</h1>";
+			else
+				bd.innerHTML+="<h1>恭喜！中状元啦！</h1>";
+		}
+		else
+		{
+			for(var i=0;i<6;i++)
+			{
+				if(num[i]==4)
+				sijin=1;
+				}
+				if(sijin==1)
+				bd.innerHTML+="<h1>恭喜！四进！</h1>";
+				else if(num[0]==1&&num[1]==1&&num[2]==1&&num[3]==1&&num[4]==1&&num[5]==1)
+				bd.innerHTML+="<h1>恭喜！对堂哦！！</h1>";
+				else if(num[3]==3)
+				bd.innerHTML+="<h1>恭喜！三红！</h1>";
+				else if(num[3]==2)
+				bd.innerHTML+="<h1>恭喜！二举！</h1>";
+				else if(num[3]==1)
+				bd.innerHTML+="<h1>恭喜！一秀！</h1>";
+				else
+				bd.innerHTML+="<h1>很可惜，什么都没有。</h1>";
+		}
+	
+}
+
+		</SCRIPT>
+	</HEAD>
+	<BODY background="images/124.webp" id="bd" onload="init()" onkeydown="start()" onclick="start()">
+		<div align="center">
+			<table width="44%" border="0" cellspacing="10" cellpadding="0">
+				<tr>
+					<td width="33%"><img id="pic1" src="images/1.png" width="100" height="100"></td>
+					<td width="29%"><img id="pic2" src="images/2.png" width="100" height="100"></td>
+					<td width="17%"><img id="pic3" src="images/3.png" width="100" height="100"></td>
+					<td width="2%"><img id="pic4" src="images/4.png" width="100" height="100"></td>
+					<td width="16%"><img id="pic5" src="images/5.png" width="100" height="100"></td>
+					<td width="20%"><img id="pic6" src="images/6.png" width="100" height="100"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="mm" align="center">
+
+			<a href="file:///C:/Users/26356/Desktop/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%20(2)/p1.html" target="_blank"><font size="6">返回</font></a>
+		</div>
+		<div id="s" align="center">
+			<h2>(單機屏幕即可開始)</h2>
+		</div>
+		<div id="s22" >
+			<img src="images/345.webp" width="500" height="300">
+		</div>
+	</BODY>
+</HTML>
